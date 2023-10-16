@@ -1,0 +1,67 @@
+{
+  "name": "mri-lib",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajdip112/client-module.git"
+  },
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/mri-lib.umd.js",
+  "module": "./dist/mri-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mri-lib.es.js",
+      "require": "./dist/mri-lib.umd.js"
+    }
+  },
+  "engines": {
+    "node": "^16.18.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/material": "^5.12.3",
+    "@mui/x-data-grid-pro": "^6.3.1",
+    "@mui/x-date-pickers-pro": "^6.0.4",
+    "dayjs": "^1.11.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.12.3",
+    "@mui/x-data-grid-pro": "^6.3.1",
+    "@mui/x-date-pickers-pro": "^6.0.4",
+    "dayjs": "^1.11.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.0",
+    "vite-plugin-dts": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  }
+}
